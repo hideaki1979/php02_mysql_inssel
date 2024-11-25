@@ -48,15 +48,17 @@
     </div>
     <div class="resultarea">
         <table class="booklist">
-            <tr>
-                <th class="cover">表紙</th>
-                <th class="title">タイトル</th>
-                <th class="publisher">出版社</th>
-                <th class="auther">著者</th>
-                <th class="price">値段</th>
-                <th class="releasedate">発売日</th>
-                <th class="caption">説明</th>
-            </tr>
+            <?php if(!empty($books)): ?>
+                <tr>
+                    <th class="cover">表紙</th>
+                    <th class="title">タイトル</th>
+                    <th class="publisher">出版社</th>
+                    <th class="auther">著者</th>
+                    <th class="price">値段</th>
+                    <th class="releasedate">発売日</th>
+                    <th class="caption">説明</th>
+                </tr>
+            <?php endif ?>
             <?php foreach($books as $book): ?>
                 <tr>
                     <td class="cover"><img src="<?= $book['imageurl'] ?>" alt="本の画像" class="bookimg"></td>
